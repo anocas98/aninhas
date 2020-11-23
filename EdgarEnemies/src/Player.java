@@ -23,16 +23,27 @@ public class Player implements PlayerInterface {
     }
 
     @Override
-    public int normalAttack() {
-        return normalAttack;
+    public int normalAttack(Hittable h) {
+        return h.setDamage(normalAttack);
     }
 
     @Override
-    public int specialAttack() {
-        if (specialAttack > 0) {
+    public int specialAttack(Hittable h) {
+        if (specialAttackCounter> 0) {
             specialAttackCounter --;
-            return specialAttack;
+            return h.setDamage(specialAttack);
         }
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "health=" + health +
+                ", normalAttack=" + normalAttack +
+                ", specialAttack=" + specialAttack +
+                ", healthRechargeCounter=" + healthRechargeCounter +
+                ", specialAttackCounter=" + specialAttackCounter +
+                '}';
     }
 }

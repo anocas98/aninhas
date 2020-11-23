@@ -11,5 +11,6 @@ public class Elf extends Enemy {
             System.out.println("sshiii preee sshiii preee sshiii preee");
         }
 
-    }
+
+}
 

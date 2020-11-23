@@ -1,6 +1,6 @@
 public class EnemyFactory {
 
-    public final static Enemy createEnemy(String enemy) {
+    public final static Hittable createEnemy(String enemy) {
         switch(enemy) {
             case "Elf":
                 return new Elf(12,12);
