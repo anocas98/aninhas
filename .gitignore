@@ -1,0 +1,8 @@
+# aninhas
+
+#Ignore .idea files
+.idea/
+
+### macOS ###
+# General
+.DS_Store
